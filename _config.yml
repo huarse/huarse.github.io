@@ -1,5 +1,5 @@
 lang: zh-CN
-permalink: /error.html
+permalink: /404.html
 exclude:
   - package.json
   - README.md
