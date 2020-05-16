@@ -3,10 +3,11 @@ body {
   background-color: #F9F9F9;
 }
 
-.main-content {
-  pre, code, kbd, samp {
-    font-family: 'Fira Mono', 'Andale Mono', 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;;
-  }
+.main-content pre, 
+.main-content code, 
+.main-content kbd, 
+.main-content samp {
+  font-family: 'Fira Mono', 'Andale Mono', 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;;
 }
 
 .homepage {
