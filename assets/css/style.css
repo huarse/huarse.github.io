@@ -1,17 +1,26 @@
+html, body {
+  min-height: 100%;
+}
+
 body {
+  margin: 0;
   font-family: 'Fira Sans', -apple-system, 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
   background-color: #F9F9F9;
 }
 
-.main-content pre, 
-.main-content code, 
-.main-content kbd, 
-.main-content samp {
+pre, code, kbd, samp {
   font-family: 'Fira Mono', 'Andale Mono', 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;;
 }
 
 .homepage {
+  padding: 16px;
   background: url("/assets/img/background.png") no-repeat;
   background-size: 100% auto;
   color: #fff;
+}
+
+@media screen and (max-aspect-ratio: 375 / 250) {
+  .homepage {
+    background-size: auto 100%;
+  }
 }
