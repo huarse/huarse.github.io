@@ -11,6 +11,7 @@ body {
 }
 
 .homepage {
-  background: url(../img/background.png) no-repeat;
+  background: url("/assets/img/background.png") no-repeat;
+  background-size: 100% auto;
   color: #fff;
 }
