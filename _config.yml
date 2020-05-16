@@ -3,3 +3,8 @@ lang: zh-CN
 # title: EDGE OF SOLAR SYSTEM
 # description: This is my backyard.
 permalink: /404.html
+exclude:
+  - package.json
+  - README.md
+  - DEVELOPMENT.md
+  - node_modules
