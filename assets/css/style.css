@@ -4,12 +4,17 @@ html, body {
 
 body {
   margin: 0;
-  font-family: 'Fira Sans', -apple-system, 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  font-family: 'Alibaba Sans', 'Fira Sans', -apple-system, 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
   background-color: #F9F9F9;
+  font-weight: 300;
 }
 
 pre, code, kbd, samp {
   font-family: 'Fira Mono', 'Andale Mono', 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
 }
 
 .homepage {
@@ -17,6 +22,15 @@ pre, code, kbd, samp {
   background: url("/assets/img/background.png") no-repeat;
   background-size: 100% auto;
   color: #fff;
+}
+
+.homepage address {
+  position: fixed;
+  left: 0;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-style: normal;
 }
 
 @media screen and (max-aspect-ratio: 375 / 250) {
