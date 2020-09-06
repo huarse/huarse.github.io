@@ -1,0 +1,1 @@
+.base-page-container{display:flex;flex-direction:column;flex:1 1}.base-page-container .ant-breadcrumb{flex:0 0 auto;margin-bottom:16px}.base-page-content{flex:1 1;background-color:#fff;min-height:calc(100vh - 190px);padding:24px}.list-page-container .page-caption{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;margin-top:20px}

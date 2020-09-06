@@ -3,5 +3,4 @@ permalink: /404.html
 exclude:
   - package.json
   - README.md
-  - DEVELOPMENT.md
   - node_modules

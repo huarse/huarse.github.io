@@ -1,2 +1,11 @@
-node_modules/
 .DS_Store
+node_modules/
+coverage/
+.travis.yml
+.idea
+.vscode/
+npm-debug.log
+npm-debug.log.*
+*.bak
+package-lock.json
+.eslintcache

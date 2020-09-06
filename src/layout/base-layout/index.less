@@ -1,0 +1,31 @@
+// base layout style
+// @author MOYAN <moyan@come-future.com>
+// @create 2020/07/15 23:04
+
+@import "~@/styles/variables";
+
+.base-layout {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.base-layout-body {
+  height: calc(100% - 48px);
+  overflow: hidden;
+
+  .base-layout-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 16px;
+    overflow: auto;
+  }
+
+  .ant-layout-footer {
+    flex: 0 0 auto;
+    color: #999;
+    margin-top: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+}

@@ -1,0 +1,13 @@
+.DS_Store
+node_modules/
+coverage/
+dist/
+build/
+public/
+vendors/
+test/
+**/*.log
+**/*.min.js
+**/*-min.js
+*.bak
+lib/

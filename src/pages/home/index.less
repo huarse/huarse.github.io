@@ -1,0 +1,40 @@
+// page style
+// @author MOYAN <moyan@come-future.com>
+// @create 2020/07/19 23:41
+
+@import "~@/styles/variables";
+
+.home-page-container {
+  padding: 0;
+}
+
+.home-page-header {
+  height: 240px;
+  padding: 60px 24px 20px;
+  background-color: #fff;
+  color: #999;
+
+  h1 {
+    font-size: 60px;
+    font-weight: 300;
+    color: inherit;
+    text-align: center;
+  }
+}
+
+.home-page-section {
+  margin: 32px auto;
+
+  > h2 {
+    font-weight: 300;
+    font-size: 32px;
+  }
+
+  .card-list {
+    display: grid;
+    // grid-template-columns: repeat(3, auto);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+}
