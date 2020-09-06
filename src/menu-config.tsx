@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 import { HomeFilled, CodeFilled, ToolFilled, GithubOutlined, DashboardOutlined } from '@ant-design/icons';
 import { MenuConfigProps } from '@/types/common';
 import { menuConfigFormatter } from '@/components/nav-menu/utils';
-import { IS_LOCAL } from '@/common/const';
+// import { IS_LOCAL } from '@/common/const';
 import request from '@/services';
 
 // =====================================================================

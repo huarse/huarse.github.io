@@ -3,14 +3,42 @@
 // @create 2020/07/19 23:40
 
 import React, {} from 'react';
-import { Card } from 'antd';
+import { Card, Carousel } from 'antd';
 import './index.less';
 
 export default function HomePage({ history }) {
   return (
     <div className="home-page-container">
       <div className="home-page-header">
-        <h1>Hello, World</h1>
+        <Carousel effect="fade" autoplay autoplaySpeed={5000} dotPosition="right">
+          <article>
+            <div className="carousel-item"
+              style={{ backgroundImage: 'url(https://img.alicdn.com/tfs/TB1xGEhgj39YK4jSZPcXXXrUFXa-1920-1200.jpg)' }}
+            >
+              <div className="item-desc">
+                我是描述内容~~~
+              </div>
+            </div>
+          </article>
+          <article>
+            <div className="carousel-item"
+              style={{ backgroundImage: 'url(https://img.alicdn.com/tfs/TB1C.zZOFT7gK0jSZFpXXaTkpXa-1920-1080.jpg)' }}
+            >
+              <div className="item-desc">
+                我是描述内容~~~
+              </div>
+            </div>
+          </article>
+          <article>
+            <div className="carousel-item"
+              style={{ backgroundImage: 'url(https://img.alicdn.com/tfs/TB1NUIggj39YK4jSZPcXXXrUFXa-1920-1200.jpg)' }}
+            >
+              <div className="item-desc">
+                我是描述内容~~~
+              </div>
+            </div>
+          </article>
+        </Carousel>
       </div>
 
       <section className="home-page-section">

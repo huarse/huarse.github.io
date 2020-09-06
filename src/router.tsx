@@ -14,7 +14,7 @@ export const routerConfig: RouterConfigItem[] = [{
   // disabled: !IS_LOCAL, // 线上禁用此路由，下同
 }, {
   path: '/page/example/list',
-  component: SuspenseHOC(lazy(() => import(/* webpackChunkName: "chunk.example.list" */'@/pages/example/list-page'))),
+  component: SuspenseHOC(lazy(() => import(/* webpackChunkName: "chunk.example.list" */'@/pages/example/list-page')), { needLogin: true }),
   // disabled: !IS_LOCAL,
 }, {
   path: '/404',

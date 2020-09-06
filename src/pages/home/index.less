@@ -9,16 +9,23 @@
 }
 
 .home-page-header {
-  height: 240px;
-  padding: 60px 24px 20px;
-  background-color: #fff;
-  color: #999;
+  .carousel-item {
+    position: relative;
+    height: 280px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+  }
 
-  h1 {
-    font-size: 60px;
-    font-weight: 300;
-    color: inherit;
-    text-align: center;
+  .item-desc {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 40px;
+    padding: 16px;
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
   }
 }
 

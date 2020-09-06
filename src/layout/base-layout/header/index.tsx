@@ -41,9 +41,9 @@ export default function LayoutHeader() {
       <GlobalMenu />
       <div className="app-brand">
         <div className="brand-logo">
-          <img src="https://img.alicdn.com/tfs/TB1DZQAhggP7K4jSZFqXXamhVXa-128-128.png" alt=""/>
+          <img src="https://img.alicdn.com/tfs/TB13x2pTET1gK0jSZFrXXcNCXXa-200-200.jpg" alt=""/>
         </div>
-        <Link to="/">后台管理系统</Link>
+        <Link to="/">HUAZHI.ME</Link>
       </div>
       <span className="header-deivider"></span>
       <s className="flex-air"></s>
