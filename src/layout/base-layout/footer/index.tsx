@@ -9,7 +9,7 @@ import { CopyrightOutlined } from '@ant-design/icons';
 export default function LayoutFooter() {
   return (
     <Layout.Footer style={{ textAlign: 'center', }}>
-      Copyright <CopyrightOutlined /> 2020 来未来科技
+      Copyright <CopyrightOutlined /> 2020 墨测科技
     </Layout.Footer>
   );
 }
