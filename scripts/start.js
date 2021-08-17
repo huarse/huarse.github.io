@@ -1,12 +1,12 @@
 // start script
-// @author MOYAN <moyan@come-future.com>
+// @author CAIHUAZHI <moyan@come-future.com>
 // @create 2020/07/14 11:10
 
 const webpack = require('webpack');
 const webpackDevServer = require('webpack-dev-server');
 const devConfig = require('../config/webpack.config.dev');
 
-const PORT = +process.env.PORT || 8802;
+const PORT = +process.env.PORT || 8808;
 
 process.on('unhandledRejection', err => {
   // 事件监听....

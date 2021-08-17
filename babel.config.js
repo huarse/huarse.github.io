@@ -1,5 +1,5 @@
 // babel config
-// @author MOYAN <moyan@come-future.com>
+// @author CAIHUAZHI <moyan@come-future.com>
 // @create 2020/07/31 09:26
 
 module.exports = {
@@ -17,6 +17,8 @@ module.exports = {
   plugins: [
     ['@babel/plugin-proposal-decorators', { 'legacy': true }],
     ['@babel/plugin-proposal-class-properties', { 'loose': true }],
-    '@babel/plugin-proposal-export-namespace-from'
+    '@babel/plugin-proposal-export-namespace-from',
+    ['@babel/plugin-proposal-private-methods', { loose: true }],
+    ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
   ]
 }

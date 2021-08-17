@@ -7,9 +7,10 @@ const webpack = require('webpack');
 const chalk = require('chalk');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
-const { externalMap, devScriptsInjection, devStyleInjection } = require('./webpack.external');
+const { externalMap, devPublicPath, devScriptsInjection, devStyleInjection } = require('./webpack.external');
 
 const cwd = process.cwd();
+const { BUILD_DEST = 'build' } = process.env;
 
 module.exports = {
   mode: 'development',
@@ -18,9 +19,9 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(cwd, 'build'),
+    path: path.resolve(cwd, BUILD_DEST),
     chunkFilename: 'js/[name].chunk.js',
-    publicPath: '/',
+    publicPath: devPublicPath,
   },
   externals: externalMap,
   resolve: {

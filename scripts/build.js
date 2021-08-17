@@ -11,7 +11,7 @@ const prodConfig = require('../config/webpack.config.prod');
 const { prodSourceCopy } = require('../config/webpack.external');
 
 const WORKSPACE = process.cwd();
-const { ANALYZE, BUILD_DIST = 'build' } = process.env;
+const { ANALYZE, BUILD_DEST = 'build' } = process.env;
 
 process.on('unhandledRejection', err => {
   console.error('unhandledRejection: ', err);
@@ -53,14 +53,14 @@ webapck(prodConfig, (err, stats) => {
 
   // >> 复制文件
   print('debug', '复制 external 文件...');
-  fs.ensureDirSync(path.resolve(WORKSPACE, BUILD_DIST));
-  fs.ensureDirSync(path.resolve(WORKSPACE, BUILD_DIST, 'js'));
-  fs.ensureDirSync(path.resolve(WORKSPACE, BUILD_DIST, 'css'));
+  fs.ensureDirSync(path.resolve(WORKSPACE, BUILD_DEST));
+  fs.ensureDirSync(path.resolve(WORKSPACE, BUILD_DEST, 'js'));
+  fs.ensureDirSync(path.resolve(WORKSPACE, BUILD_DEST, 'css'));
 
   prodSourceCopy.forEach(item => {
     fs.copyFileSync(
       path.resolve(WORKSPACE, item.source),
-      path.resolve(WORKSPACE, BUILD_DIST, item.target),
+      path.resolve(WORKSPACE, BUILD_DEST, item.target),
     );
     console.log(`${chalk.gray('>')} ${chalk.green(`${item.source} -> ${item.target}`)}`);
   });

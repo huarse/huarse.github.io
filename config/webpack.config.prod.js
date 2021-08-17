@@ -11,10 +11,11 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
-const { externalMap, prodScriptsInjection, prodStyleInjection } = require('./webpack.external');
+const { externalMap, prodPublicPath, prodScriptsInjection, prodStyleInjection } = require('./webpack.external');
 // const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
 
 const cwd = process.cwd();
+const { BUILD_DEST = 'build' } = process.env;
 
 module.exports = {
   mode: 'production',
@@ -23,9 +24,9 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(cwd, 'build'),
+    path: path.resolve(cwd, BUILD_DEST),
     chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
-    publicPath: 'build/', // https://come2f-web.oss-cn-hangzhou.aliyuncs.com/huarse/huarse.github.io/
+    publicPath: prodPublicPath,
   },
   externals: externalMap,
   resolve: {
@@ -72,7 +73,8 @@ module.exports = {
       use: [{
         loader: MiniCssExtractPlugin.loader,
         options: {
-          publicPath: '../'
+          // publicPath: '../'
+          publicPath: prodPublicPath,
         },
       }, {
         loader: 'css-loader',
@@ -143,9 +145,7 @@ module.exports = {
     minimize: true,
     minimizer: [
       new TerserPlugin({
-        cache: true,
         parallel: true,
-        // TODO remove console.log
       }),
     ],
     splitChunks: {
